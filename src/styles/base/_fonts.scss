@@ -1,0 +1,53 @@
+body {
+  font-family: system-ui;
+  font-size: 1em;
+}
+
+h3 {
+  font-weight: 450;
+}
+
+.text-image {
+
+  &::before, &::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &.mail-text-image::before {
+    background-image: url('~/assets/mail-text-image.png');
+  }
+
+  &.phone-text-image::after {
+    background-image: url('~/assets/phone-text-image.png');
+  }
+
+  &.pin-text-image::before {
+    background-image: url('~/assets/pin-text-image.png');
+  }
+
+  &.world-text-image::before {
+    background-image: url('~/assets/world-text-image.png');
+  }
+  
+  &.clock-text-image::after {
+    background-image: url('~/assets/clock-text-image.png');
+  }
+
+  &.space-text-image {
+    $spacing: 5px;
+
+    &::before {
+      margin-right: $spacing;
+    }
+
+    &::after {
+      margin-left: $spacing;
+    }
+  }
+}

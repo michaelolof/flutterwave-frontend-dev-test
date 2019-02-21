@@ -1,0 +1,20 @@
+@mixin image_section_row($number) {
+  $margin: 4%;
+
+  .image {
+    flex: 0 0 35%;
+  }
+
+  @if $number == 3 {
+    .image:first-child {
+      @extend %flex-grow;
+      margin-right: $margin;
+    }
+  } @else {
+    .image:last-child {
+      @extend %flex-grow;
+      margin-left: $margin;
+    }
+  }
+
+}
