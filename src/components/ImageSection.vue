@@ -22,9 +22,66 @@
     data() {
       return {
         images: [
-          'shoe-1.png', 'shoe-2.jpg', 'cocktail-1.png', 'model-1.png',
-          'man-in-coat.png', 'slippers-1.png', 'shoes-2.png',
-          'laptop-1.png', 'shirts-1.jpg', 'shoes-3.png'
+          { 
+            name: 'Gucci Flops: Men shoe',
+            imageURL: '/assets/shoe-1.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000'
+          }, 
+          {
+            name: 'Gucci Flops: Men shoe',
+            imageURL: '/assets/shoe-2.jpg',
+            availability: 'Availabile in size 32, 34',
+            price: 'N240,000'
+          }, 
+          {
+            name: 'Gucci Flops: Men shoe',
+            imageURL: '/assets/cocktail-1.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000'
+          }, 
+          {
+            name: 'Gucci Flops: Men shoe',
+            imageURL: '/assets/model-1.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000'
+          },
+          { 
+            name: 'Gucci Flops: Men shoe',
+            imageURL: '/assets/man-in-coat.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000' 
+          }, 
+          {
+            name: 'Gucci Flops: Men shoe',
+            imageURL: '/assets/slippers-1.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000'
+          }, 
+          {
+            name: 'Gucci Flop: Men shoe',
+            imageURL: '/assets/shoes-2.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000'
+          },
+          { 
+            name: 'Gucci Flop: Men shoe',
+            imageURL: '/assets/laptop-1.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000' 
+          }, 
+          { 
+            name: 'Gucci Flop: Men shoe',
+            imageURL: '/assets/shirts-1.jpg',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000' 
+          }, 
+          { 
+            name: 'Gucci Flop: Men shoe', 
+            imageURL: '/assets/shoes-3.png',
+            availability: 'Available in size 32, 34',
+            price: 'N240,000'
+          }
         ]
       }
     },

@@ -1,12 +1,15 @@
 <template>
   <div class="image-row">
-    <div v-for="image in row" :key="image" class="image">
-      <img :src="'/assets/' + image" />
-      <div class="overlay">
+    <div v-for="image in row" :key="image.imageURL" class="image">
+      <img :src="image.imageURL" />
+      <div class="image-overlay">
         <div class="image-details">
-          <div class="price">N120,000</div>
-          <div class="availability">Available in size 44, 45, 46</div>
-          <button class="buy-now">Buy Now</button>
+          <div class="price">{{ image.price }}</div>
+          <div class="name-and-availability">
+            <div class="name">{{ image.name }}</div>
+            <div class="availability">{{ image.availability }}</div>
+          </div>
+          <button class="buy-now">Add to Cart</button>
         </div>
       </div>
     </div>

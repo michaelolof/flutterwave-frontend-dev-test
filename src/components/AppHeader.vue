@@ -1,7 +1,6 @@
 <template>  
   <header class="app-header">
-    <h1>ASHLUXURY</h1>
-
+    <app-navigation></app-navigation>
     <h3>
       Fashion & Lifestyle <span class="text-image mail-text-image phone-text-image space-text-image">admin@ashluxury.com</span><br/>
       whatsapp: +234 8169761216 <span class="text-image world-text-image space-text-image">worldwide shipping</span><br/>
@@ -9,3 +8,13 @@
     </h3>
   </header>
 </template>
+
+<script>
+  import AppNavigation from './AppNavigation.vue';
+
+  export default {
+    components: {
+      AppNavigation,
+    }
+  }
+</script>

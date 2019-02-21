@@ -1,7 +1,8 @@
 <template>
   <span class="icon-blk">
     <i :class="['icon', type ]"></i>
-    {{ label }}
+    <span class="icon-label">{{ label }}</span>
+    <span class="icon-sub-text">3</span>
   </span>
 </template>
 
@@ -21,12 +22,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  i {
-    // Reset icon to 1em;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    background-color: #CCC;
-    vertical-align: center;
-  }
+
 </style>

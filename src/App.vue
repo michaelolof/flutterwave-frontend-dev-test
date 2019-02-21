@@ -1,7 +1,5 @@
 <template>
-  <div id="app">
-    <app-navigation></app-navigation>
-    
+  <div id="app">    
     <app-header></app-header>
     
     <image-section></image-section>

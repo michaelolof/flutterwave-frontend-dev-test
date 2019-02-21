@@ -1,6 +1,10 @@
 <template>
   <nav class="app-navigation">
-    <Icon type="cart" label="Cart" />
+    <div class="app-navigation__inner app-width">
+      <h1>TIGERNUT MILK</h1>    
+      <Icon type="cart" label="Cart" />
+    </div>
+    
   </nav>
 </template>
 

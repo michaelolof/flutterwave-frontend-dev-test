@@ -1,5 +1,14 @@
 %app-width {
-  width: 950px;
+  width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: 950px ) {
+    width: 950px;
+  }
+}
+
+.app-width {
+  width: 90%;
   margin: 0 auto;
 }
 
