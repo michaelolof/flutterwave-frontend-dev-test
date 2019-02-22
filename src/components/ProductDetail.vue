@@ -10,7 +10,7 @@
         
         <div class="image-overlay">
           <div class="image-details">
-            <div class="price">{{ product.price }}</div>
+            <div class="price">{{ product.price.nairatize() }}</div>
             <div class="name-and-availability">
               <div class="name">{{ product.name }}</div>
               <div class="availability">{{ product.availability }}</div>

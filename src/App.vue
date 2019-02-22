@@ -20,6 +20,11 @@
         checkoutIsShown: false,
         cart: [],
       }
+    },
+
+    watch: {
+      cart(newVal, oldVal) {
+      }
     }
   }
 </script>
