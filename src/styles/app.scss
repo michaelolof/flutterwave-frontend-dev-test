@@ -102,15 +102,24 @@ nav.app-navigation {
       @extend %position-relative;
       justify-self: right;
       align-self: flex-end;
-      margin-right: 4%;
+      margin-right: 6%;
 
       &>i {
-        // Reset icon to 1em;
-        width: 20px;
-        height: 20px;
-        display: inline-block;
-        background-color: #CCC;
         vertical-align: bottom;
+        font-family: 'flutterwave-rave';
+        font-size: 1.3em;
+
+        &::before {
+          content: "\61";
+        }
+
+        @media (min-width: 800px) {
+          &::before {
+            content: "\62";
+            vertical-align: sub; 
+          }
+        }
+
       }
 
       &>.icon-label {
@@ -119,8 +128,8 @@ nav.app-navigation {
 
       &>.icon-sub-text {
         @extend %position-absolute;
-        top: -80%;
-        right: -80%;
+        top: -50%;
+        right: -95%;
         padding: 0.8px 7px 1px;
         font-weight: bold;
         font-size: 0.9em;
@@ -386,13 +395,9 @@ div.image {
   .close-blk {
     @extend %display-flex;
     @extend %justify-right;
-    margin-bottom: 6px;
 
-    .icon.close {
-      display: block;
-      width: 20px;
-      height: 20px;
-      background-color: #CCC;
+    .icon.icon-close {
+      font-size: 1.7em;
     }
   }
 

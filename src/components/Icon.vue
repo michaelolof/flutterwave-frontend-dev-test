@@ -1,6 +1,6 @@
 <template>
   <span class="icon-blk">
-    <i :class="['icon', type ]"></i>
+    <i data-icon="flutterwave-test" :class="['icon', type ]"></i>
     <span class="icon-label">{{ label }}</span>
     <span class="icon-sub-text">{{ products }}</span>
   </span>

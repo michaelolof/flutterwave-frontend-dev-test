@@ -1,21 +1,15 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'Berlin Sans';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Berlin Sans'), url('/fonts/BRLNSDB.woff') format('woff');
-}
-
-@font-face {
   font-family: "flutterwave-rave";
-  src:url("/fonts/flutterwave-rave.eot");
-  src:url("/fonts/flutterwave-rave.eot?#iefix") format("embedded-opentype"),
-    url("/fonts/flutterwave-rave.woff") format("woff"),
-    url("/fonts/flutterwave-rave.ttf") format("truetype"),
-    url("/fonts/flutterwave-rave.svg#flutterwave-rave") format("svg");
+  src:url("fonts/flutterwave-rave.eot");
+  src:url("fonts/flutterwave-rave.eot?#iefix") format("embedded-opentype"),
+    url("fonts/flutterwave-rave.woff") format("woff"),
+    url("fonts/flutterwave-rave.ttf") format("truetype"),
+    url("fonts/flutterwave-rave.svg#flutterwave-rave") format("svg");
   font-weight: normal;
   font-style: normal;
+
 }
 
 [data-icon]:before {
@@ -52,18 +46,4 @@
 }
 .icon-close:before {
   content: "\63";
-}
-
-
-body {
-  font-family: system-ui;
-  font-size: 1em;
-}
-
-h3 {
-  font-weight: 450;
-}
-
-.bold {
-  font-weight: bold;
 }

@@ -2,7 +2,7 @@
   <div class="product-detail">
     <div class="product-detail__inner">
       <div class="close-blk">
-        <i class="icon close" @click="closeProductDetail"></i>
+        <i class="icon icon-close" @click="closeProductDetail"></i>
       </div>
       
       <div class="image">
