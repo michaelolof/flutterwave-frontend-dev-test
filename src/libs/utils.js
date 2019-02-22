@@ -3,7 +3,7 @@ import Vue from "vue";
 
 export async function fetchProducts(pageNo) {
   // Simulate a server request delay.
-  await till( 3000 );
+  await till( 1500 );
 
   // Just default to one json storage. 
   // Ideally this should be a database fetch.
