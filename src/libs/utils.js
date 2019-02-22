@@ -31,6 +31,12 @@ export function deleteFromVueArray( arr, index ) {
   Vue.delete( arr, index );
 }
 
+export function persistor( key ) {
+  return {
+    get:() => JSON.parse( window.localStorage.getItem( key ) ),
+    post: ( products ) => window.localStorage.setItem( key, JSON.stringify( products ) )
+  }
+}
 
 export function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
