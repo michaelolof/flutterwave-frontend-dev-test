@@ -1,7 +1,7 @@
 .vscode
 .DS_Store
 node_modules
-
+public
 # local env files
 .env.local
 .env.*.local
