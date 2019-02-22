@@ -1,6 +1,6 @@
 <template>  
   <header class="app-header">
-    <app-navigation></app-navigation>
+    <app-navigation :cart="cart"></app-navigation>
     <h3>
       Fashion & Lifestyle <span class="text-image mail-text-image phone-text-image space-text-image">admin@ashluxury.com</span><br/>
       whatsapp: +234 8169761216 <span class="text-image world-text-image space-text-image">worldwide shipping</span><br/>
@@ -15,6 +15,13 @@
   export default {
     components: {
       AppNavigation,
+    },
+
+    props: {
+      cart: {
+        type: Array,
+        required: true,
+      }
     }
   }
 </script>

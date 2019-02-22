@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
 import './styles/app.scss'
+import "./libs/mutations";
 
 Vue.config.productionTip = false
 

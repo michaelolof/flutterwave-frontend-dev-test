@@ -2,7 +2,7 @@
   <span class="icon-blk">
     <i :class="['icon', type ]"></i>
     <span class="icon-label">{{ label }}</span>
-    <span class="icon-sub-text">3</span>
+    <span class="icon-sub-text">{{ products }}</span>
   </span>
 </template>
 
@@ -16,6 +16,10 @@ export default {
     label: {
       type: String,
       default: ''
+    },
+    products: {
+      type: Number,
+      required: true,
     }
   }
 }

@@ -1,3 +1,12 @@
+@mixin centralize() {
+  width: 90%;
+  margin: 0 auto;
+
+  @media (min-width: 950px ) {
+    width: 950px;
+  }
+}
+
 @mixin image_section_row($number) {
   $margin: 4%;
 
@@ -18,3 +27,5 @@
   }
 
 }
+
+

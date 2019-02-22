@@ -1,28 +1,22 @@
 <template>
   <div class="image-row">
-    <div v-for="image in row" :key="image.imageURL" class="image">
-      <img :src="image.imageURL" />
-      <div class="image-overlay">
-        <div class="image-details">
-          <div class="price">{{ image.price }}</div>
-          <div class="name-and-availability">
-            <div class="name">{{ image.name }}</div>
-            <div class="availability">{{ image.availability }}</div>
-          </div>
-          <button class="buy-now">Add to Cart</button>
-        </div>
-      </div>
-    </div>
+    <product v-for="image in row" :key="image.id" :product="image" :cart="cart" :modalProduct="modalProduct"></product> 
   </div>  
 </template>
 
 <script>
+  import Product from "./Product.vue";
+
   export default {
+    components: {
+      Product,
+    },
+    
     props: {
-      row: {
-        type: Array,
-        required: true
-      }
-    }
+      row: { type: Array, required: true },
+      cart: { type: Array, required: true, },
+      modalProduct: { type: Array, required: true, },
+    },
+
   }
 </script>
