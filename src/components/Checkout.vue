@@ -82,20 +82,21 @@
         if( this.cart.length === 0 ) this.continueShopping();
       },
       async checkout() {
-        const self = this;
-        self.checkingOut = true
-        const resp = await postProducts( self.cart );
-        self.successMessage = resp.data.message;
-        self.fade = "fade-in";
-        self.checkingOut = false;
+        this.checkingOut = true
+        const resp = await postProducts( this.cart );
+        this.successMessage = resp.data.message;
+        this.fade = "fade-in";
+        this.checkingOut = false;
         await till( 4000 );
-        self.fade = 'fade-out';
+        this.fade = 'fade-out';
         await till( 1500 );
         this.continueShopping();
+        this.emptyCart();
+      },
+      emptyCart() {
+        this.$parent.cart = []
       }
     },
-    mounted() {
-    }
   }
 </script>
 

@@ -100,6 +100,7 @@ nav.app-navigation {
 
     .icon-blk {
       @extend %position-relative;
+      @extend %cursor-pointer;
       justify-self: right;
       align-self: flex-end;
       margin-right: 6%;
@@ -540,6 +541,7 @@ div.image {
       text-align: center;
 
       .change-quantity {
+        @extend %cursor-pointer;
         background-color: $black;
         color: $white;
         padding: 0 0 1px; 
@@ -547,6 +549,7 @@ div.image {
     }
 
     .remove {
+      @extend %cursor-pointer;
       margin-top: 48%;
       text-align: center;
       color: $peach;

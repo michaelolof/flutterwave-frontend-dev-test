@@ -57,8 +57,9 @@
         this.quantity--; 
       },
       addToCart() {
-        // Check if product is already in cart.
         const self = this;
+        if( self.product.quantity < 1 ) return;
+        // Check if product is already in cart.
         const index = this.cart.findIndex( product => self.product.id === product.id );
         this.product.quantity = this.quantity;
         if( index === -1 ) this.cart.push( this.product );
