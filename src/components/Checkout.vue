@@ -1,5 +1,10 @@
 <template>
   <div class="checkout">
+
+    <div :class="['checkout-success', fade ]">
+      {{ successMessage }}
+    </div>
+
     <div class="checkout-inner">
       <nav class="app-navigation">
         <div class="app-navigation__inner app-width">
@@ -31,7 +36,8 @@
 
         <div class="continue-shopping" @click="continueShopping">Continue Shopping</div>
 
-        <div class="checkout">CHECKOUT</div>
+        <div v-if="!checkingOut" class="checkout-btn" @click="checkout">CHECKOUT</div>
+        <div v-if="checkingOut" class="checkout-btn" disabled="disabled"><div class="spinner"></div></div>
 
       </div>
     </div>
@@ -39,11 +45,18 @@
 </template>
 
 <script>
-  import { deleteFromVueArray } from "../libs/utils";
+  import { deleteFromVueArray, postProducts, till } from "../libs/utils";
 
   export default {
     props: {
       cart: { type: Array, required: true },
+    },
+    data() {
+      return {
+        checkingOut: false,
+        fade: 'fade-out',
+        successMessage: "",
+      }
     },
     computed: {
       total() {
@@ -66,18 +79,49 @@
       removeFromCart( product ) {
         const index = this.cart.findIndex( pro => pro.id === product.id );
         deleteFromVueArray( this.cart, index );
+      },
+      async checkout() {
+        const self = this;
+        self.checkingOut = true
+        const resp = await postProducts( self.cart );
+        self.successMessage = resp.data.message;
+        self.fade = "fade-in";
+        self.checkingOut = false;
+        await till( 4000 );
+        self.fade = 'fade-out';
+        await till( 1500 );
+        this.continueShopping();
       }
     },
+    mounted() {
+    }
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   body {
     width: 100%;
     height: 100%;
   }
   #app {
     position: unset;
+  }
+
+  .checkout-btn[disabled="disabled"] {
+    opacity: 0.6;
+    text-align: center;
+
+    .spinner {
+      display: inline-block;
+    }
+
+    .spinner, .spinner::before {
+      width: 1.2em;
+      height: 1.2em;
+    }
+    .spinner::before {
+      border: solid 2px;
+    }
   }
 </style>
 

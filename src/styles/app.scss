@@ -485,6 +485,8 @@ div.image {
 }
 
 .checkout {
+  padding-bottom: 100px;
+
   nav.app-navigation > .app-navigation__inner > h1 {
     font-family: system-ui;
     font-size: 1em;
@@ -569,7 +571,8 @@ div.image {
     font-size: 0.9em;
   }
 
-  .checkout {
+  .checkout-btn {
+    @extend %cursor-pointer;
     background-color: $black;
     color: $white;
     position: fixed;
@@ -580,5 +583,32 @@ div.image {
     right: 4%;
     left: 4%;
     box-sizing: border-box;
+
+    @media (min-width: 950px) {
+      widows: 950px;
+    }
   }
+
+  .checkout-success {
+    @extend %bg-success;
+    padding: 1em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear
+  }
+
+  .fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s linear;
+  }
+
 }

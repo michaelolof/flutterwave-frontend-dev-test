@@ -16,14 +16,16 @@ export async function fetchProducts(pageNo) {
 
 }
 
+export async function postProducts( products ) {
+  return axios.post( "http://www.mocky.io/v2/5be477442f00004900d9f521", products )
+}
+
 export function updateVueArray( oldArr, newArr ) {
   for( let elem of newArr ) {
     Vue.set( oldArr, oldArr.length, elem );
   }
   return oldArr;
 }
-
-// export function updateVueArrayWithValue( arr, )
 
 export function deleteFromVueArray( arr, index ) {
   Vue.delete( arr, index );
@@ -34,7 +36,7 @@ export function scrollToTop() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-async function till(ms) {
+export async function till(ms) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve( ms );
