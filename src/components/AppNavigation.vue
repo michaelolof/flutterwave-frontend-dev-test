@@ -2,9 +2,9 @@
   <nav class="app-navigation">
     <div class="app-navigation__inner app-width">
       <h1>TIGERNUT MILK</h1>    
-      <!-- <span @click="showCartView"> -->
+      <span class="icon-blk" @click="showCartView">
         <Icon type="cart" label="Cart" :products="cart.length" />
-      <!-- </span> -->
+      </span>
     </div>
     
   </nav>
