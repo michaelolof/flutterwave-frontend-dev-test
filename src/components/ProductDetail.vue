@@ -56,7 +56,6 @@
         if( this.quantity === 0 ) return;
         this.quantity--; 
       },
-
       addToCart() {
         // Check if product is already in cart.
         const self = this;
@@ -65,11 +64,9 @@
         if( index === -1 ) this.cart.push( this.product );
         else this.cart[ index ] = this.product;
       },
-
       closeProductDetail() {
         deleteFromVueArray( this.modalProduct, 0 );
       },
-
       checkoutNow() {
         this.addToCart();
         this.closeProductDetail();

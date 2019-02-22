@@ -79,6 +79,7 @@
       removeFromCart( product ) {
         const index = this.cart.findIndex( pro => pro.id === product.id );
         deleteFromVueArray( this.cart, index );
+        if( this.cart.length === 0 ) this.continueShopping();
       },
       async checkout() {
         const self = this;
